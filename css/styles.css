@@ -12,10 +12,11 @@
   --transition-duration: 250ms;
   --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
 
-  --features-count: 4;
-  --specialisation-count: 3;
-  --team-count: 4;
-  --clients-count: 6;
+  --features-col: 4;
+  --specialisation-col: 3;
+  --team-col: 4;
+  --clients-col: 6;
+  --product-set-col: 3;
 }
 
 body {
@@ -98,6 +99,7 @@ img {
   display: inline-flex;
   margin-top: 0;
   margin-bottom: 0;
+  margin-left: 0;
   margin-right: 93px;
 
   color: var(--title-text-color);
@@ -111,7 +113,7 @@ img {
   outline: var(--accent-color) solid 1px;
 }
 
-.logo--white {
+.logo--inverse {
   margin-bottom: 20px;
   margin-right: 0;
 
@@ -123,7 +125,7 @@ img {
 
 /* site navigation component*/
 
-.navigation {
+.header__nav {
   display: flex;
   align-items: center;
 }
@@ -157,6 +159,9 @@ img {
 .site-nav__link--current {
   color: var(--accent-color);
   outline: none;
+}
+.site-nav__link--current:focus {
+  outline: var(--accent-color) solid 1px;
 }
 .site-nav__link--current::after {
   position: absolute;
@@ -218,6 +223,8 @@ img {
   outline: none;
 }
 
+/* - studio page - */
+
 /* hero section */
 
 .hero {
@@ -252,7 +259,9 @@ img {
 /* button component */
 
 .button {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-width: 200px;
   min-height: 50px;
   margin-top: 0;
@@ -261,6 +270,8 @@ img {
   margin-bottom: 0;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   color: var(--white-color);
   font-family: inherit;
@@ -278,6 +289,17 @@ img {
 }
 .button:focus {
   outline: var(--white-color) solid 1px;
+}
+.button__icon {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+}
+.button__icon--append {
+  margin-left: 10px;
+}
+.button__icon--prepend {
+  margin-right: 10px;
 }
 
 /* modal form */
@@ -471,23 +493,24 @@ img {
   height: 15px;
   margin-right: 7px;
 
+  color: transparent;
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
-  fill: transparent;
-  stroke: transparent;
+  box-shadow: none;
+  fill: currentColor;
+  stroke: currentColor;
 
-  transition-property: border-color background-color fill stroke;
+  transition-property: color border-color background-color box-shadow;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing);
 }
 .form__input-checkbox:checked + .form__icon-checkbox {
+  color: var(--white-color);
   border-color: transparent;
   background-color: var(--accent-color);
-  fill: var(--white-color);
-  stroke: var(--white-color);
 }
 .form__input-checkbox:focus-within + .form__icon-checkbox {
-  outline: var(--accent-color) dotted 1px;
+  box-shadow: 0px 0px 5px var(--primary-text-color);
 }
 
 /* agreement link component */
@@ -505,7 +528,7 @@ img {
   align-items: flex-start;
 }
 .features__item {
-  flex-basis: calc((100% - (var(--cards-gap) * (var(--features-count)-1))) / var(--features-count));
+  flex-basis: calc((100% - (var(--cards-gap) * (var(--features-col)-1))) / var(--features-col));
 }
 .features__icon {
   display: flex;
@@ -541,7 +564,7 @@ img {
 }
 .specialisation__item {
   flex-basis: calc(
-    (100% - (var(--cards-gap) * (var(--specialisation-count)-1))) / var(--specialisation-count)
+    (100% - (var(--cards-gap) * (var(--specialisation-col)-1))) / var(--specialisation-col)
   );
   position: relative;
 }
@@ -570,7 +593,7 @@ img {
   text-transform: uppercase;
 }
 
-/* our team section */
+/* team section */
 
 .section--team {
   background-color: var(--secondary-background-color);
@@ -579,7 +602,7 @@ img {
   display: flex;
 }
 .team__item {
-  flex-basis: calc((100% - (var(--cards-gap) * (var(--team-count)-1))) / var(--team-count));
+  flex-basis: calc((100% - (var(--cards-gap) * (var(--team-col)-1))) / var(--team-col));
 
   background-color: var(--white-color);
   border-bottom-left-radius: 4px;
@@ -590,7 +613,7 @@ img {
 .team__item:not(:last-child) {
   margin-right: var(--cards-gap);
 }
-.team__content {
+.team__meta {
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 32px;
@@ -637,7 +660,7 @@ img {
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing);
 }
-.social__link--transparent-background {
+.social__link--white {
   color: var(--white-color);
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -662,7 +685,7 @@ img {
   align-items: center;
 }
 .clients__item {
-  flex-basis: calc((100% - (var(--cards-gap) * (var(--clients-count)-1))) / var(--clients-count));
+  flex-basis: calc((100% - (var(--cards-gap) * (var(--clients-col)-1))) / var(--clients-col));
 }
 .clients__item:not(:last-child) {
   margin-right: var(--cards-gap);
@@ -696,7 +719,7 @@ img {
   fill: currentColor;
 }
 
-/* portfolio */
+/* - portfolio page - */
 
 /* filter component */
 
@@ -738,8 +761,6 @@ img {
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-.filter__button:focus {
   outline: none;
 }
 
@@ -747,26 +768,26 @@ img {
 
 /* products grid container */
 
-.product {
+.product-set {
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--cards-gap));
   margin-left: calc(-1 * var(--cards-gap));
 }
-
-/* product card  */
-
-.product__card {
-  flex-basis: calc(100% / 3 - var(--cards-gap));
+.product-set__item {
+  flex-basis: calc(100% / (var(--product-set-col) - var(--cards-gap)));
 
   margin-left: var(--cards-gap);
   margin-top: var(--cards-gap);
 
   background-color: var(--white-color);
+}
 
-  transition-property: box-shadow;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--transition-timing);
+/* product card component */
+
+.product {
+  width: 100%;
+  height: 100%;
 }
 .product__link {
   display: block;
@@ -775,6 +796,10 @@ img {
 
   color: var(--primary-text-color);
   text-decoration: none;
+
+  transition-property: box-shadow;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing);
 }
 .product__link:hover,
 .product__link:focus {
@@ -818,7 +843,7 @@ img {
   transition-timing-function: var(--transition-timing);
 }
 
-.product__content {
+.product__meta {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
@@ -920,13 +945,4 @@ img {
 .form-subscription__input:focus-within {
   border-color: var(--accent-color);
   outline: none;
-}
-.form-subscription__icon-container {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  margin-left: 10px;
-}
-.form-subscription__icon {
-  vertical-align: middle;
 }

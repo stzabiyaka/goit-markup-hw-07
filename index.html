@@ -5,6 +5,8 @@
     <meta name="description" content="Вебстудия, г. Киев" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -22,7 +24,7 @@
   <body>
     <header class="header">
       <div class="header__content container">
-        <nav class="navigation">
+        <nav class="header__nav">
           <a class="logo" href="./index.html" title="На главную" lang="en"
             ><span class="logo--accent">Web</span>Studio</a
           >
@@ -240,7 +242,7 @@
         </div>
       </section>
 
-      <!-- our team section -->
+      <!-- team section -->
 
       <section class="section section--team">
         <div class="container">
@@ -253,7 +255,7 @@
                 width="270"
                 height="260"
               />
-              <div class="team__content">
+              <div class="team__meta">
                 <h3 class="team__title">Игорь Демьяненко</h3>
                 <p class="team__description" lang="en">Product Designer</p>
                 <ul class="social">
@@ -290,7 +292,7 @@
             </li>
             <li class="team__item">
               <img src="./images/team_repina.jpg" alt="Ольга Репина" width="270" height="260" />
-              <div class="team__content">
+              <div class="team__meta">
                 <h3 class="team__title">Ольга Репина</h3>
                 <p class="team__description" lang="en">Frontend Developer</p>
                 <ul class="social">
@@ -327,7 +329,7 @@
             </li>
             <li class="team__item">
               <img src="./images/team_tarasov.jpg" alt="Николай Тарасов" width="270" height="260" />
-              <div class="team__content">
+              <div class="team__meta">
                 <h3 class="team__title">Николай Тарасов</h3>
                 <p class="team__description" lang="en">Marketing</p>
                 <ul class="social">
@@ -364,7 +366,7 @@
             </li>
             <li class="team__item">
               <img src="./images/team_yermakov.jpg" alt="Михаил Ермаков" width="270" height="260" />
-              <div class="team__content">
+              <div class="team__meta">
                 <h3 class="team__title">Михаил Ермаков</h3>
                 <p class="team__description" lang="en">UI Designer</p>
                 <ul class="social">
@@ -458,7 +460,7 @@
     <footer class="footer">
       <div class="footer__content container">
         <div>
-          <a class="logo logo--white" href="./index.html" title="На главную" lang="en"
+          <a class="logo logo--inverse" href="./index.html" title="На главную" lang="en"
             ><span class="logo--accent">Web</span>Studio</a
           >
           <address>
@@ -489,44 +491,28 @@
           <p class="footer__title">присоединяйтесь</p>
           <ul class="social">
             <li class="social__item">
-              <a
-                href="#"
-                class="social__link social__link--transparent-background"
-                aria-label="Instagram"
-              >
+              <a href="#" class="social__link social__link--white" aria-label="Instagram">
                 <svg class="social__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a
-                href="#"
-                class="social__link social__link--transparent-background"
-                aria-label="Twitter"
-              >
+              <a href="#" class="social__link social__link--white" aria-label="Twitter">
                 <svg class="social__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a
-                href="#"
-                class="social__link social__link--transparent-background"
-                aria-label="Facebook"
-              >
+              <a href="#" class="social__link social__link--white" aria-label="Facebook">
                 <svg class="social__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a
-                href="#"
-                class="social__link social__link--transparent-background"
-                aria-label="LinkedIn"
-              >
+              <a href="#" class="social__link social__link--white" aria-label="LinkedIn">
                 <svg class="social__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
@@ -547,8 +533,8 @@
               autocomplete="email"
             />
             <button class="button" type="submit">
-              Подписаться<span class="form-subscription__icon-container">
-                <svg class="form-subscription__icon" width="24" height="24">
+              Подписаться<span class="button__icon button__icon--append">
+                <svg width="24" height="24">
                   <use href="./images/icons.svg#icon-send"></use>
                 </svg>
               </span>
