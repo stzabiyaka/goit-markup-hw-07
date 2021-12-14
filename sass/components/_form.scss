@@ -9,19 +9,21 @@
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 10px;
+
+  &--textarea {
+    margin-bottom: 20px;
+  }
+
+  &--checkbox {
+    margin-bottom: 30px;
+    padding-left: 12px;
+  }
 }
 .form__field:focus-within > .form__input,
 .form__field:focus-within > .form__icon {
   fill: getColor('accent');
   border-color: getColor('accent');
   outline: none;
-}
-.form__field--textarea {
-  margin-bottom: 20px;
-}
-.form__field--checkbox {
-  margin-bottom: 30px;
-  padding-left: 12px;
 }
 .form__label {
   display: block;
@@ -44,21 +46,24 @@
 
   transition-property: border-color;
   @include transitionProperties();
+
+  &--textarea {
+    height: 120px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    resize: none;
+  }
+
+  &--textarea::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+  }
 }
-.form__input--textarea {
-  height: 120px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 16px;
-  padding-right: 16px;
-  resize: none;
-}
-.form__input--textarea::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-}
+
 .form__icon {
   position: absolute;
   bottom: 21px;
@@ -70,16 +75,25 @@
   transition-property: fill;
   @include transitionProperties();
 }
-.form__input-checkbox--hidden {
-  /* -moz-appearance: none;
+.form__input-checkbox {
+  &--hidden {
+    --hidden {
+      /* -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none; */
 
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+    }
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
 }
 .form__label-checkbox {
   display: inline-block;
@@ -113,8 +127,7 @@
   box-shadow: 0px 0px 5px getColor('text-primary');
 }
 
-.agreement-link,
-.agreement-link:visited {
+.agreement-link {
   color: getColor('accent');
   text-decoration: underline;
 }

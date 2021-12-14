@@ -1,3 +1,4 @@
+// site colors palette
 $colors: (
   'white-primary': #ffffff,
   'white-secondary': rgba(255, 255, 255, 0.6),
@@ -11,7 +12,12 @@ $colors: (
 @function getColor($key) {
   @return map-get($colors, $key);
 }
-
+// site fonts
+$fontPrimary: 'Roboto', sans-serif;
+$fontLogo: 'Raleway', sans-serif;
+// sections container width
+$containerWidth: 1200px;
+// transitions duration and timing function
 $transitions: (
   'duration': 250ms,
   'timing': cubic-bezier(0.4, 0, 0.2, 1),
@@ -19,7 +25,9 @@ $transitions: (
 @function getTransition($key) {
   @return map-get($transitions, $key);
 }
-
+// gaps between cards size
+$cards-gap: 30px;
+// grids columns quantity
 $columns: (
   'features': 4,
   'specialisation': 3,
@@ -30,4 +38,3 @@ $columns: (
 @function getColumn($key) {
   @return map-get($columns, $key);
 }
-$cards-gap: 30px;

@@ -22,14 +22,15 @@
 
   transition-property: border-color;
   @include transitionProperties();
-}
-.form-subscription__input::placeholder {
-  font-size: 16px;
-  line-height: 1.25;
 
-  color: getColor('white-secondary');
-}
-.form-subscription__input:focus-within {
-  border-color: getColor('accent');
-  outline: none;
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+
+    color: getColor('white-secondary');
+  }
+  &:focus-within {
+    border-color: getColor('accent');
+    outline: none;
+  }
 }

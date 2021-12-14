@@ -4,6 +4,10 @@
 }
 .features__item {
   @include flexBasis(getColumn('features'));
+
+  &:not(:last-child) {
+    margin-right: #{$cards-gap};
+  }
 }
 .features__icon {
   display: flex;
@@ -14,9 +18,6 @@
 
   background-color: getColor('background-secondary');
   border-radius: 4px;
-}
-.features__item:not(:last-child) {
-  margin-right: #{$cards-gap};
 }
 .features__title {
   margin-bottom: 10px;

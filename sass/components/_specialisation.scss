@@ -4,10 +4,12 @@
 .specialisation__item {
   @include flexBasis(getColumn('specialisation'));
   position: relative;
+
+  &:not(:last-child) {
+    margin-right: $cards-gap;
+  }
 }
-.specialisation__item:not(:last-child) {
-  margin-right: $cards-gap;
-}
+
 .specialisation__text-container {
   position: absolute;
   bottom: 0;

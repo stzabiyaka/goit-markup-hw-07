@@ -35,10 +35,12 @@
   visibility: hidden;
   pointer-events: none;
   opacity: 0;
+
+  > .modal-container {
+    transform: translate(-50%, -50%) scale(0);
+  }
 }
-.modal-backdrop.is-hidden > .modal-container {
-  transform: translate(-50%, -50%) scale(0);
-}
+
 .modal-container__button {
   position: absolute;
   top: 8px;
@@ -55,6 +57,10 @@
   background-color: inherit;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+
+  &:focus {
+    outline: none;
+  }
 }
 .modal-container__icon {
   position: absolute;
@@ -63,9 +69,6 @@
 
   transition-property: color, transform;
   @include transitionProperties();
-}
-.modal-container__button:focus {
-  outline: none;
 }
 .modal-container__button:hover .modal-container__icon,
 .modal-container__button:focus .modal-container__icon {

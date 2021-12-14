@@ -30,7 +30,9 @@
 .address {
   font-style: normal;
 }
-.address__item:not(:last-child) {
-  margin-bottom: 9px;
-  margin-right: 70px;
+.address__item {
+  &:not(:last-child) {
+    margin-bottom: 9px;
+    margin-right: 70px;
+  }
 }

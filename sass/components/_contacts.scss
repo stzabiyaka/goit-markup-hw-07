@@ -19,25 +19,29 @@
 
   transition-property: color;
   @include transitionProperties();
+
+  &--semitransparent {
+    color: getColor('white-secondary');
+    font-weight: normal;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+
+  &--white {
+    color: getColor('white-primary');
+  }
+
+  &:hover,
+  &:focus {
+    color: getColor('accent');
+    outline: none;
+  }
 }
-.contacts__link--semitransparent {
-  color: getColor('white-secondary');
-  font-weight: normal;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-}
-.contacts__link--white {
-  color: getColor('white-primary');
-}
+
 .contacts__icon {
   display: inline-block;
   margin-right: 10px;
 
   vertical-align: middle;
   fill: currentColor;
-}
-.contacts__link:hover,
-.contacts__link:focus {
-  color: getColor('accent');
-  outline: none;
 }
