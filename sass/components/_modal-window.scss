@@ -61,6 +61,14 @@
   &:focus {
     outline: none;
   }
+
+  &:hover,
+  &:focus {
+    .modal-container__icon {
+      color: getColor('accent');
+      transform: rotateZ(360deg);
+    }
+  }
 }
 .modal-container__icon {
   position: absolute;
@@ -69,11 +77,6 @@
 
   transition-property: color, transform;
   @include transitionProperties();
-}
-.modal-container__button:hover .modal-container__icon,
-.modal-container__button:focus .modal-container__icon {
-  color: getColor('accent');
-  transform: rotateZ(360deg);
 }
 .modal-container__title {
   margin-bottom: 12px;

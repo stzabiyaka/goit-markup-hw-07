@@ -97,7 +97,7 @@ body {
 }
 
 .button:focus {
-  outline: #ffffff solid 1px;
+  outline: #afb1b8 solid 1px;
 }
 
 .button__icon {
@@ -373,6 +373,12 @@ body {
   outline: none;
 }
 
+.modal-container__button:hover .modal-container__icon, .modal-container__button:focus .modal-container__icon {
+  color: #2196f3;
+  -webkit-transform: rotateZ(360deg);
+          transform: rotateZ(360deg);
+}
+
 .modal-container__icon {
   position: absolute;
   fill: currentColor;
@@ -384,13 +390,6 @@ body {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-container__button:hover .modal-container__icon,
-.modal-container__button:focus .modal-container__icon {
-  color: #2196f3;
-  -webkit-transform: rotateZ(360deg);
-          transform: rotateZ(360deg);
 }
 
 .modal-container__title {
@@ -516,15 +515,15 @@ body {
   clip: rect(0 0 0 0);
 }
 
-.form__input-checkbox--hidden --hidden {
-  /* -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none; */
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
+.form__input-checkbox:checked + .form__icon-checkbox {
+  color: #ffffff;
+  border-color: transparent;
+  background-color: #2196f3;
+}
+
+.form__input-checkbox:focus-within + .form__icon-checkbox {
+  -webkit-box-shadow: 0px 0px 5px #757575;
+          box-shadow: 0px 0px 5px #757575;
 }
 
 .form__label-checkbox {
@@ -559,17 +558,6 @@ body {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form__input-checkbox:checked + .form__icon-checkbox {
-  color: #ffffff;
-  border-color: transparent;
-  background-color: #2196f3;
-}
-
-.form__input-checkbox:focus-within + .form__icon-checkbox {
-  -webkit-box-shadow: 0px 0px 5px #757575;
-          box-shadow: 0px 0px 5px #757575;
 }
 
 .agreement-link {

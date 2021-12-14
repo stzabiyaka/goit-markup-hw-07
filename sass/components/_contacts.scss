@@ -3,8 +3,10 @@
   align-items: center;
   margin-left: auto;
 }
-.contacts__item:not(:last-child) {
-  margin-right: 50px;
+.contacts__item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 .contacts__link {
   margin-top: 0;
