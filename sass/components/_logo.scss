@@ -1,0 +1,27 @@
+.logo {
+  display: inline-flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 93px;
+
+  color: getColor('text-title');
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+}
+.logo:focus {
+  outline: getColor('accent') solid 1px;
+}
+
+.logo--inverse {
+  margin-bottom: 20px;
+  margin-right: 0;
+
+  color: getColor('white-primary');
+}
+.logo--accent {
+  color: getColor('accent');
+}
