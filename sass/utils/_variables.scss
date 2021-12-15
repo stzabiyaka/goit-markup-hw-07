@@ -9,24 +9,23 @@ $colors: (
   'accent': #2196f3,
   'icon': #afb1b8,
 );
-@function getColor($key) {
-  @return map-get($colors, $key);
-}
+
 // site fonts
 $fontPrimary: 'Roboto', sans-serif;
 $fontLogo: 'Raleway', sans-serif;
+
 // sections container width
 $containerWidth: 1200px;
-// transitions duration and timing function
+
+// transitions duration and timing
 $transitions: (
   'duration': 250ms,
   'timing': cubic-bezier(0.4, 0, 0.2, 1),
 );
-@function getTransition($key) {
-  @return map-get($transitions, $key);
-}
+
 // gaps between cards size
 $cards-gap: 30px;
+
 // grids columns quantity
 $columns: (
   'features': 4,
@@ -35,6 +34,3 @@ $columns: (
   'clients': 6,
   'product-set': 3,
 );
-@function getColumn($key) {
-  @return map-get($columns, $key);
-}

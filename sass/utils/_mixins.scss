@@ -4,7 +4,7 @@
 }
 
 // transition properties
-@mixin transitionProperties() {
-  transition-duration: getTransition('duration');
-  transition-timing-function: getTransition('timing');
+@mixin transitionProperties($duration: 'duration', $timing: 'timing') {
+  transition-duration: getTransition($duration);
+  transition-timing-function: getTransition($timing);
 }

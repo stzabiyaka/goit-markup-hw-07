@@ -1,3 +1,150 @@
+/**
+ * Minified by jsDelivr using clean-css v4.2.3.
+ * Original file: /npm/modern-normalize@1.1.0/modern-normalize.css
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
+hr {
+  height: 0;
+  color: inherit;
+}
+
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+table {
+  text-indent: 0;
+  border-color: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+[type='button'],
+[type='reset'],
+[type='submit'],
+button {
+  -webkit-appearance: button;
+}
+
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+legend {
+  padding: 0;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+summary {
+  display: list-item;
+}
 h1,
 h2,
 h3,
@@ -96,8 +243,11 @@ body {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.button:focus {
-  outline: #afb1b8 solid 1px;
+.button:hover, .button:focus {
+  background: #188ce8;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  outline: none;
 }
 
 .button__icon {
@@ -110,10 +260,6 @@ body {
 
 .button__icon--append {
   margin-left: 10px;
-}
-
-.button__icon--prepend {
-  margin-right: 10px;
 }
 
 .header {
@@ -315,6 +461,12 @@ body {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-backdrop.is-hidden {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
 .modal-container {
   position: absolute;
   top: 50%;
@@ -334,12 +486,6 @@ body {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-backdrop.is-hidden {
-  visibility: hidden;
-  pointer-events: none;
-  opacity: 0;
 }
 
 .modal-backdrop.is-hidden > .modal-container {
@@ -373,12 +519,6 @@ body {
   outline: none;
 }
 
-.modal-container__button:hover .modal-container__icon, .modal-container__button:focus .modal-container__icon {
-  color: #2196f3;
-  -webkit-transform: rotateZ(360deg);
-          transform: rotateZ(360deg);
-}
-
 .modal-container__icon {
   position: absolute;
   fill: currentColor;
@@ -390,6 +530,13 @@ body {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-container__button:hover .modal-container__icon,
+.modal-container__button:focus .modal-container__icon {
+  color: #2196f3;
+  -webkit-transform: rotateZ(360deg);
+          transform: rotateZ(360deg);
 }
 
 .modal-container__title {
@@ -515,17 +662,6 @@ body {
   clip: rect(0 0 0 0);
 }
 
-.form__input-checkbox:checked + .form__icon-checkbox {
-  color: #ffffff;
-  border-color: transparent;
-  background-color: #2196f3;
-}
-
-.form__input-checkbox:focus-within + .form__icon-checkbox {
-  -webkit-box-shadow: 0px 0px 5px #757575;
-          box-shadow: 0px 0px 5px #757575;
-}
-
 .form__label-checkbox {
   display: inline-block;
   font-size: 14px;
@@ -558,6 +694,12 @@ body {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__input-checkbox:checked + .form__icon-checkbox {
+  color: #ffffff;
+  border-color: transparent;
+  background-color: #2196f3;
 }
 
 .agreement-link {
@@ -794,10 +936,7 @@ body {
 .clients__link:hover, .clients__link:focus {
   border-color: #2196f3;
   color: #2196f3;
-}
-
-.clients__link:focus {
-  outline: #ffffff solid 1px;
+  outline: none;
 }
 
 .clients__icon {
@@ -899,15 +1038,6 @@ body {
   outline: none;
 }
 
-.product__link:hover .product__overlay, .product__link:focus .product__overlay {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .product__overlay-container {
   position: relative;
   overflow: hidden;
@@ -926,6 +1056,16 @@ body {
   background-color: #2196f3;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product__link:hover .product__overlay,
+.product__link:focus .product__overlay {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

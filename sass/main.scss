@@ -1,9 +1,13 @@
-// normaliser
-@import './utils/normalizer';
 // variables
 @import './utils/variables';
+// functions
+@import './utils/functions';
 // mixins
 @import './utils/mixins';
+//moden-normalize
+@import './base/normalize';
+// drop styles
+@import './base/drop-styles';
 // body component
 @import './components/body';
 // container componet

@@ -29,9 +29,7 @@
   &:focus {
     border-color: getColor('accent');
     color: getColor('accent');
-  }
-  &:focus {
-    outline: getColor('white-primary') solid 1px;
+    outline: none;
   }
 }
 .clients__icon {

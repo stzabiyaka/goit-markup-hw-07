@@ -19,14 +19,6 @@
       1px 4px 6px rgba(0, 0, 0, 0.16);
     outline: none;
   }
-
-  &:hover,
-  &:focus {
-    .product__overlay {
-      transform: translateY(0);
-      @include transitionProperties();
-    }
-  }
 }
 
 .product__overlay-container {
@@ -50,6 +42,12 @@
 
   transform: translateY(100%);
   @include transitionProperties();
+
+  .product__link:hover &,
+  .product__link:focus & {
+    transform: translateY(0);
+    @include transitionProperties();
+  }
 }
 .product__overlay-description {
   color: getColor('white-primary');
